@@ -1,74 +1,84 @@
 @import "../../style.scss";
 
-.right-sidebar{
-    display: none;
-    @include desktop {
-        position: sticky;
-        top: 6.6rem;
-        overflow: scroll;
-        height: calc(100vh - 6.6rem);
-        display: flex;
-        flex-direction: column;
-        flex: 3;
-        padding: 1rem;
-        margin: 0.5rem;
-        &::-webkit-scrollbar {
-            display: none;
+.right-sidebar {
+    @include themify($themes) {
+        display: none;
+        @include desktop {
+            position: sticky;
+            top: 5.6rem;
+            overflow: scroll;
+            height: calc(100vh - 6.6rem);
+            display: flex;
+            flex-direction: column;
+            flex: 3;
+            padding: 1rem;
+            margin: 0.5rem;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
-    }    
+    
     .container {
-        background-color: rgb(255, 255, 255);
+        background-color: themed("bg");
+        color: themed("fontCol");
         padding: 1rem;
         margin-bottom: 1rem;
         border-radius: 20px;
         font-weight: 300;
+     
         span {
-            color: rgb(160, 160, 160);
+            color: themed("secondaryFontCol");
         }
-        .friend {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            margin: 0.8rem 0;
-            span {
-                width: 100%;
-                color: rgb(0,0,0);
-            }
-            .profile {
+
+            .friend {
                 display: flex;
                 align-items: center;
-                gap: 0.4rem;
-                position: relative;
-                cursor: pointer;
-                div {
+                justify-content: space-between;
+                gap: 1rem;
+                margin: 0.8rem 0;
+
+                span {
+                    width: 100%;
+                    color: themed("fontCol");
+                }
+
+                .profile {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    position: relative;
+                    cursor: pointer;
+
+                    div {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: themed("border");
+                        border-radius: 50%;
+                        height: 1.6rem;
+                        width: 1.6rem;
+                        margin-left: 0.3rem;
+                    }
+
+                    .green-dot {
+                        background-color: green;
+                        height: 0.5rem;
+                        width: 0.5rem;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+                button {
+                    height: 1.6rem;
+                    width: 1.6rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: lightblue;
-                    border-radius: 50%;
-                    height: 1.6rem;
-                    width: 1.6rem;
-                    margin-left: 0.3rem;
+                    font-size: 1.2rem;
                 }
-                .green-dot {
-                    background-color: green;
-                    height: 0.5rem;
-                    width: 0.5rem;
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                }
-            }
-            button {
-                height: 1.6rem;
-                width: 1.6rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.2rem;
-            }
         }
+
         .news {
             display: flex;
             flex-direction: row-reverse;
@@ -76,33 +86,40 @@
             align-items: center;
             gap: 1rem;
             padding: 1rem;
+
             .news-img {
                 height: 3rem;
                 min-width: 5rem;
                 border-radius: 5px;
                 background-color: rgb(240, 240, 240);
             }
+
             p {
                 margin: 0;
             }
+
             span {
                 font-size: 0.9rem;
             }
-        }  
-    
+        }
+
         .event {
             padding: 1rem;
             display: flex;
             flex-direction: column;
+
             div {
                 display: flex;
                 justify-content: space-between;
                 gap: 1rem;
                 align-items: center;
+
                 p {
                     margin: 0;
                 }
+
                 span {
+                    align-self: flex-end;
                     min-width: 5rem;
                 }
             }
@@ -113,29 +130,34 @@
             display: flex;
             align-items: flex-start;
             gap: 1rem;
+
             .profile {
                 display: flex;
                 align-items: center;
                 gap: 0.4rem;
                 position: relative;
                 cursor: pointer;
+
                 div {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: lightblue;
+                    background-color: themed("border");
                     border-radius: 50%;
                     height: 1.6rem;
                     width: 1.6rem;
                     margin-left: 0.3rem;
                 }
             }
+
             p {
                 margin: 0;
+
                 span {
                     font-size: 0.9rem;
                 }
             }
         }
     }
+}
 }

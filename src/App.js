@@ -12,14 +12,18 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
 
   const currentUser = true;
 
+  const {darkMode} = useContext(DarkModeContext);
+
   const Layout = () => {
     return (
-      <div>
+      <div className={`theme-${darkMode ? "dark" : "default"}`}>
         <Navbar/>
         <div className="main-container">
           <LeftSidebar/>
@@ -40,7 +44,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
+       element: (
         <ProtectedRoute>
           <Layout />
         </ProtectedRoute>

@@ -1,47 +1,51 @@
+@import "../../style.scss";
+    
 .comments {
-    .new-comment {
-        display: flex;
-        gap: 0.6rem;
-        padding: 1.4rem;
-        justify-content: space-between;
-        max-height: 2.2rem;
-        input {
-            width: 80%;
-            font-size: 0.9rem;
-        }
-        button {
-            align-self: center;
-            border-radius: 5px;
-            height: 2rem;
-            width: 4rem;
-            padding: 0.5rem;
-        }
-    }
-    .comment {
-        display: flex;
-        margin-top: 1.4rem;
-        margin-left: 1.4rem;
-        gap: 1rem;
-        p {
-            font-size: 0.9rem;
-        }
-
-        .time {
-            font-size: 0.9rem;
-            color: rgb(160, 160, 160);
-        }
-    }  
-    .profile {
-        position: relative;
-        cursor: pointer;
-        .icon {
+    @include themify($themes) {
+        .new-comment {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: lightblue;
-            border-radius: 50%;
-            height: 1.6rem;
-            width: 1.6rem;
+            gap: 0.6rem;
+            padding: 1.4rem;
+            justify-content: space-between;
+            max-height: 2.2rem;
+            input {
+                width: 80%;
+                font-size: 0.9rem;
+            }
+            button {
+                align-self: center;
+                border-radius: 5px;
+                height: 2rem;
+                width: 4rem;
+                padding: 0.5rem;
+            }
+        }
+        .comment {
+            display: flex;
+            margin-top: 1.4rem;
+            margin-left: 1.4rem;
+            gap: 1rem;
+            p {
+                font-size: 0.9rem;
+            }
+
+            .time {
+                font-size: 0.9rem;
+                color: rgb(160, 160, 160);
+            }
+        }  
+        .profile {
+            position: relative;
+            cursor: pointer;
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: themed("border");
+                border-radius: 50%;
+                height: 1.6rem;
+                width: 1.6rem;
+            }
         }
     }
 }   

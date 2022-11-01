@@ -4,10 +4,14 @@ import { BsHouseDoor,
         BsSearch, 
         BsPlusSquare, 
         BsPerson,
-        BsBell } from 'react-icons/bs';
+        BsBell,
+        BsFillSunFill } from 'react-icons/bs';
 import { FiMail } from 'react-icons/fi';
 import { useState } from 'react';
 import Links from './Links';
+import Footer from '../leftSidebar/Footer';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../context/darkModeContext';
 
 
 const Navbar = () => {
@@ -16,12 +20,14 @@ const Navbar = () => {
 
     isMenuOpen ? document.body.style.overflow="hidden" : document.body.style.overflow="visible";
 
+    const {darkMode, toggleTheme} = useContext(DarkModeContext);
+
   return (
     <nav>
         <div className="left">
             <span>so<small>_</small>social</span>
             <BsHouseDoor/>
-            <BsMoonFill/>
+            {darkMode ? <BsFillSunFill onClick={toggleTheme}/> : <BsMoonFill onClick={toggleTheme}/>}
         </div>
 
         <div className="middle">
@@ -46,6 +52,10 @@ const Navbar = () => {
             {isMenuOpen && 
                 <div className="mobile-menu">
                     <Links />
+                    <div>
+                        <hr/>
+                        <Footer />
+                    </div>
                 </div>
             }
         </div>

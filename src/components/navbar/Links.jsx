@@ -11,7 +11,7 @@ import { FcTemplate,
 
 const Links = () => {
   return (
-        <div className="container">
+        <div className="links">
             <span>
                 <FcTemplate />Feed
             </span>
