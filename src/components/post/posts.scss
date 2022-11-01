@@ -1,0 +1,48 @@
+@import "../../style.scss";
+
+.post {
+    background: rgb(255,255,255);
+    border-radius: 25px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .profile {
+                display: flex;
+                justify-content: center;
+                gap: 0.4rem;
+                position: relative;
+                cursor: pointer;
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: lightblue;
+                    border-radius: 50%;
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    margin-left: 0.3rem;
+                }
+                .time {
+                    font-size: 0.9rem;
+                    color: rgb(160,160,160);
+                }
+        }
+    }
+    .content {
+        img {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    
+}

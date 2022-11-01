@@ -10,15 +10,18 @@ import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
+  Navigate,
 } from "react-router-dom";
 
 function App() {
+
+  const currentUser = true;
 
   const Layout = () => {
     return (
       <div>
         <Navbar/>
-        <div style={{display:"flex"}}>
+        <div className="main-container">
           <LeftSidebar/>
           <Outlet/>
           <RightSidebar/>
@@ -27,10 +30,21 @@ function App() {
     );
   }
 
+  const ProtectedRoute = ({children}) => {
+    if(!currentUser) {
+      return <Navigate to="/login"/> 
+    }
+    return children;
+  }
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           path: "/",
