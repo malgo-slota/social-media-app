@@ -12,9 +12,12 @@ import Links from './Links';
 import Footer from '../leftSidebar/Footer';
 import { useContext } from 'react';
 import { DarkModeContext } from '../../context/darkModeContext';
+import { AuthContext } from '../../context/authContext';
 
 
 const Navbar = () => {
+
+    const { currentUser } = useContext(AuthContext);
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -42,7 +45,7 @@ const Navbar = () => {
                 <div>
                     <BsPerson/>
                 </div>
-                <span>Joe</span>
+                <span>{currentUser.name}</span>
             </div>
             <div className="hamburger" onClick={()=>setIsMenuOpen(!isMenuOpen)}>
                 <span></span>

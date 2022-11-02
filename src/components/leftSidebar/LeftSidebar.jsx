@@ -2,8 +2,13 @@ import './leftSidebar.scss';
 import { BsPerson } from 'react-icons/bs';
 import Footer from './Footer';
 import Links from '../navbar/Links';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/authContext';
       
 const LeftSidebar = () => {
+
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <div className="left-sidebar">
 
@@ -13,7 +18,7 @@ const LeftSidebar = () => {
             <div>
               <BsPerson/>
             </div>
-            <span>Joe</span>
+            <span>{currentUser.name}</span>
           </div>
         </div>
       </div>
