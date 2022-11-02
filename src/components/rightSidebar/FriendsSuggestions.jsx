@@ -6,7 +6,7 @@ const FriendsSuggestions = () => {
     <div className="container">
         <span>Suggested friends</span>
         <div className="friend">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>
@@ -15,7 +15,7 @@ const FriendsSuggestions = () => {
           <button>+</button>
         </div>
         <div className="friend">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>
@@ -24,7 +24,7 @@ const FriendsSuggestions = () => {
           <button>+</button>
         </div>
         <div className="friend">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>

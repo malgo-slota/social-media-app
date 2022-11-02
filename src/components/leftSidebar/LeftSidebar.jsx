@@ -7,9 +7,9 @@ const LeftSidebar = () => {
   return (
     <div className="left-sidebar">
 
-      <div className="profie-short">
+      <div className="profile-short">
         <div className="profile-banner">
-          <div className="profile">
+          <div className="profile-img">
             <div>
               <BsPerson/>
             </div>

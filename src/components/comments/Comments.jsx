@@ -6,7 +6,7 @@ const Comments = () => {
     <div className="comments">
       
       <div className="new-comment">
-        <div className="profile">
+        <div className="profile-img">
                 <div className="icon">
                   <BsPerson />
                 </div>
@@ -16,7 +16,7 @@ const Comments = () => {
       </div>
      
      <div className="comment">
-        <div className="profile">
+        <div className="profile-img">
                 <div className="icon">
                   <BsPerson />
                 </div>
@@ -31,7 +31,7 @@ const Comments = () => {
       </div>
 
       <div className="comment">
-        <div className="profile">
+        <div className="profile-img">
                 <div className="icon">
                   <BsPerson />
                 </div>

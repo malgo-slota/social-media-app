@@ -6,7 +6,7 @@ const FriendsOnline = () => {
    <div className="container">
         <span>Friends online</span>
         <div className="friend">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>
@@ -15,7 +15,7 @@ const FriendsOnline = () => {
           <span>Kelsey Jannings</span>
         </div>
         <div className="friend">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>
@@ -24,7 +24,7 @@ const FriendsOnline = () => {
           <span>Michael Morgan</span>
         </div>
         <div className="friend">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>
@@ -33,7 +33,7 @@ const FriendsOnline = () => {
           <span>Margo Martindale</span>
         </div>
         <div className="friend">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>
@@ -42,7 +42,7 @@ const FriendsOnline = () => {
           <span>Courtney Portnoy</span>
         </div>
         <div className="friend">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>

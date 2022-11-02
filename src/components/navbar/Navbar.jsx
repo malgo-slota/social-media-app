@@ -38,7 +38,7 @@ const Navbar = () => {
             <BsPlusSquare/>
             <BsBell/>
             <FiMail/>
-            <div className="profile">
+            <div className="profile-img">
                 <div>
                     <BsPerson/>
                 </div>

@@ -9,7 +9,7 @@ const Posts = () => {
   return (
     <div className="post">
       <div className="row">
-            <div className="profile">
+            <div className="profile-img">
               <div className="icon">
                 <BsPerson />
               </div>

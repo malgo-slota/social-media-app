@@ -6,7 +6,7 @@ const Activity = () => {
     <div className="container">
         <span>Leatest activities</span>
         <div className="activity">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>
@@ -18,7 +18,7 @@ const Activity = () => {
         </div>
 
         <div className="activity">
-          <div className="profile">
+          <div className="profile-img">
               <div>
                     <BsPerson/>
               </div>
