@@ -7,29 +7,40 @@ nav {
         position: sticky;
         z-index: 1;
         top: 0;
-        padding: 1rem;
+        padding: 1rem 0.2rem;
         height: 1.6rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         border-bottom: 1px solid;
         border-color: themed("border");
         .left {
+            flex: 2;
             display: flex;
-            gap: 0.8rem;
-            span {
-                color: rgb(219, 89, 42);
-                small {
-                    color: themed("fontCol");
+            height: 100%;
+            align-items: center;
+            gap: 0.4rem;
+            a {
+                text-decoration: none;
+                span {
+                    cursor: pointer;
+                    color: rgb(219, 89, 42);
+                
+                    small {
+                        color: themed("fontCol");
+                    }
                 }
             }
+                svg {
+                    cursor: pointer;
+                }
         }
+        
         .middle {
+            margin: 0 0.4rem;
             position: relative;
+            height: 100%;
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 0.5rem;
             input {
                 display: none;
                 @include desktop {
@@ -48,9 +59,11 @@ nav {
         }
 
         .right {
+            flex: 2;
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            justify-content: flex-end;
+            gap: 0.4rem;
             .profile-img {
                 display: flex;
                 align-items: center;

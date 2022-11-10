@@ -1,15 +1,15 @@
 import './navbar.scss';
-import { BsHouseDoor,   
-        BsMoonFill, 
-        BsSearch, 
-        BsPlusSquare, 
-        BsPerson,
-        BsBell,
-        BsFillSunFill } from 'react-icons/bs';
+import { BsMoonFill, 
+         BsSearch, 
+         BsPlusSquare, 
+         BsPerson,
+         BsBell,
+         BsFillSunFill } from 'react-icons/bs';
 import { FiMail } from 'react-icons/fi';
 import { useState } from 'react';
 import Links from './Links';
 import Footer from '../leftSidebar/Footer';
+import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { DarkModeContext } from '../../context/darkModeContext';
 import { AuthContext } from '../../context/authContext';
@@ -28,8 +28,7 @@ const Navbar = () => {
   return (
     <nav>
         <div className="left">
-            <span>so<small>_</small>social</span>
-            <BsHouseDoor/>
+            <NavLink to="/"><span>so<small>_</small>social</span></NavLink>
             {darkMode ? <BsFillSunFill onClick={toggleTheme}/> : <BsMoonFill onClick={toggleTheme}/>}
         </div>
 
