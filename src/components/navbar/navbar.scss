@@ -43,6 +43,7 @@ nav {
             align-items: center;
             input {
                 display: none;
+                outline: none;
                 @include desktop {
                     display: block;
                     padding-right: 1.2rem;

@@ -72,15 +72,10 @@ input {
         color: themed("fontCol");
         background: transparent;
         border: none;
-        outline: none;
+        outline-color: rgb(219, 89, 42);
         font-size: 1.2rem;
         border-bottom: 1px solid;
-        border-color: themed("border");
-        &[type="date"] {    
-            font-size: 1rem;
-            color: themed("secondaryFontCol");
-            border-bottom: 1px solid;    
-        }
+        border-color: themed("border");   
         &::placeholder{
             font-weight: 300;
             font-family: 'Rubik', sans-serif;

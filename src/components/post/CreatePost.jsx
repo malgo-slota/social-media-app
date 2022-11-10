@@ -21,27 +21,55 @@ const CreatePost = () => {
 
             </div>
             {activeTab === "post" && (
-                <div className="new-post">
+                <form className="new-post">
                     <textarea/>
                     <div className="row">
                         <div>
                             <span><MdInsertEmoticon/></span>
                             <span><BiImageAdd/></span>
                         </div>
-                        <button>Add a post</button>
+                        <button type="submit">Add a post</button>
                     </div> 
-                </div>      
+                </form>      
             )}
             
             {activeTab === "event" && (
-                <div className="new-post">
+                <form className="new-post">
                     <input type="text" placeholder="Title of an event"></input>
                     <textarea placeholder="Description of an event..."/>
                     <div className="row">
-                        <input type="date"></input>
-                        <button>Add an event</button>
+                        <div className="event-date">
+                            <div>
+                                <label>Day</label>
+                                <input type="text" 
+                                        placeholder='DD'
+                                        maxLength="2"
+                                        pattern="^(0?[1-9]|[12][0-9]|3[01])$"
+                                        required>
+                                </input>
+                            </div>
+                            <div>
+                                <label>Month</label>
+                                <input type="text" 
+                                        placeholder='MM'
+                                        maxLength="2"
+                                        pattern="^(0?[1-9]|1[012])$"
+                                        required>
+                                </input>
+                            </div>
+                            <div>
+                                <label>Year</label>
+                                <input type="text" 
+                                        placeholder='YYYY'
+                                        maxLength="4"
+                                        pattern="^(19|20)\d{2}$"
+                                        required>
+                                </input>
+                            </div>
+                        </div>
+                        <button type="submit">Add an event</button>
                     </div> 
-                </div>
+                </form>
              )}
         
         </div>
